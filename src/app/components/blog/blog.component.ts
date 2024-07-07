@@ -27,12 +27,29 @@ export class BlogComponent {
   }
 
   ngOnInit(): void {
-
+    this.cargarNoticias()
   }
 
   agregarNoticia(): void {
     this.arrNoticias.push({...this.newNoticia})
     this.newNoticia = {title: "", image: "", notice: "", date: ""}
-    
+    this.cargarNoticias()
+  }
+
+  cargarNoticias(): void {
+    let html: string = "";
+    this.arrNoticias.forEach((noticia: Inoticias) =>{
+      html += `
+      <li>
+      <h2>${noticia.title}</h2>
+      <img src="${noticia.image}" alt="${noticia.title}" />
+      <p><em>${noticia.date}</em></p>
+      </li>`
+    })
+
+    const listaNoticias = document.querySelector('.listaNoticias ul');
+    if (listaNoticias) {
+    listaNoticias.innerHTML = html;
+    }
   }
 }
