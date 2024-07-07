@@ -1,1 +1,46 @@
-<p>blog works!</p>
+<header>
+  <h1>Bienvenido a mi blog de noticias</h1>
+  <p>Aquí podrás publicar y leer las últimas noticias de interés.</p>
+</header>
+<div class="wrapper">
+  <div class="formulario">
+    <h3>Participa y publica tu noticia:</h3>
+    <label for="title">Título de la noticia </label>
+    <input
+      id="title"
+      [(ngModel)]="newNoticia.title"
+      type="text"
+      placeholder="Introduce un título"
+    />
+    <label for="image">Url de la imagen</label>
+    <input
+      id="image"
+      [(ngModel)]="newNoticia.image"
+      type="url"
+      placeholder="Introduce la url de la foto"
+    />
+    <label for="notice">Contenido de la noticia</label>
+    <input
+      id="notice"
+      [(ngModel)]="newNoticia.notice"
+      type="text"
+      placeholder="Introduce el texto o cuerpo de la noticia"
+    />
+    <label for="date">Fecha de publicación</label>
+    <input
+      id="date"
+      [(ngModel)]="newNoticia.date"
+      type="text"
+      placeholder="Introduce la fecha de publicación"
+    />
+    <button (click)="agregarNoticia()">Publicar</button>
+  </div>
+  <hr />
+  <section>
+    <div class="listaNoticias">
+      <h1>Listado de noticias</h1>
+      <hr />
+      <ul></ul>
+    </div>
+  </section>
+</div>
