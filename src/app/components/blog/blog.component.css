@@ -6,7 +6,7 @@ header {
 .wrapper {
     display: flex;
     justify-content: center;
-    margin: 30px;
+    margin: 30px auto;
     padding: 20px;
     max-width: 1200px;
 }
@@ -14,8 +14,10 @@ header {
 h3 {margin-top: 0px;}
 
 .formulario {
-    width: 100%;
+    flex: 1px;
     max-width: 300px;
+    max-height: 600px;
+    box-sizing: border-box;
     padding: 20px;
     border: 1px, solid, black;
     border-radius: 5px;
@@ -46,7 +48,7 @@ h3 {margin-top: 0px;}
 .listaNoticias {
     flex: 1;
     padding: 20px;
-    max-width: 300px;
+    max-width: 600px;
     align-items: flex-start;
 }
 
@@ -55,13 +57,25 @@ h3 {margin-top: 0px;}
     padding: 0;
 }
 
-.listadoNoticias li {
+.listaNoticias li {
     border: 1px solid black;
     margin-bottom: 10px;
     padding:10px;
+    display: flex;
+    align-items: flex-start;
 }
 
-.listadoNoticias img {
-    max-width: 100%;
+.listaNoticias img {
+    max-width: 150px;
+    margin-right: 10px;
     height: auto;
+}
+
+.listaNoticias p {
+    margin: 0px;
+    flex: 1;
+}
+
+.listaNoticias div {
+    flex: 1;
 }
