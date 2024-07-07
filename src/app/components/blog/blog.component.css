@@ -1,3 +1,4 @@
+
 header {
     text-align: center;
     margin: 20px;
@@ -6,17 +7,20 @@ header {
 .wrapper {
     display: flex;
     justify-content: center;
-    margin: 30px auto;
+    margin: 0 auto;
     padding: 20px;
     max-width: 1200px;
 }
 
-h3 {margin-top: 0px;}
+h3 {
+    margin-top: 0px;
+    font-size: 20px;
+}
 
 .formulario {
     flex: 1px;
     max-width: 300px;
-    max-height: 600px;
+    max-height: 500px;
     box-sizing: border-box;
     padding: 20px;
     border: 1px, solid, black;
@@ -43,39 +47,4 @@ h3 {margin-top: 0px;}
     background-color:rgb(128, 124, 124);
     border-radius: 3px;
     color: white;
-}
-
-.listaNoticias {
-    flex: 1;
-    padding: 20px;
-    max-width: 600px;
-    align-items: flex-start;
-}
-
-.listaNoticias ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.listaNoticias li {
-    border: 1px solid black;
-    margin-bottom: 10px;
-    padding:10px;
-    display: flex;
-    align-items: flex-start;
-}
-
-.listaNoticias img {
-    max-width: 150px;
-    margin-right: 10px;
-    height: auto;
-}
-
-.listaNoticias p {
-    margin: 0px;
-    flex: 1;
-}
-
-.listaNoticias div {
-    flex: 1;
 }
