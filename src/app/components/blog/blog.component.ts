@@ -16,4 +16,10 @@ export class BlogComponent {
     notice: "",
     date: "",
   }
+
+  constructor() {
+    this.arrNoticias = [
+      { title: "Primera Noticia", image: "url blabla", notice: "noticia 1", date: "04-05-2024"},
+      { title: "Segunda Noticia", image: "url blabla", notice: "noticia 2", date: "10-05-2024"}
+    ]}
 }
