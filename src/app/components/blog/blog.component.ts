@@ -31,6 +31,11 @@ export class BlogComponent {
   }
 
   agregarNoticia(): void {
+    if (!this.newNoticia.title || !this.newNoticia.image || !this.newNoticia.notice || !this.newNoticia.date) {
+      alert("Todos los campos son obligatorios")
+      return;
+    }
+
     this.arrNoticias.push({...this.newNoticia})
     this.newNoticia = {title: "", image: "", notice: "", date: ""}
     this.cargarNoticias()
