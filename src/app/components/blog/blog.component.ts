@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Inoticias } from '../../interfaces/inoticias.interface';
 
 @Component({
   selector: 'app-blog',
@@ -8,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './blog.component.css'
 })
 export class BlogComponent {
-
+  arrNoticias: Inoticias [] = []
+  newNoticias: Inoticias = {
+    title: "",
+    image: "",
+    notice: "",
+    date: "",
+  }
 }
