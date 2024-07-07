@@ -36,6 +36,12 @@ export class BlogComponent {
       return;
     }
 
+    const datePattern = /^\d{2}-\d{2}-\d{4}$/;
+    if (!datePattern.test(this.newNoticia.date)) {
+      alert("Introduce una fecha válida con el formato dd-mm-yyyy");
+      return
+    }
+
     this.arrNoticias.push({...this.newNoticia})
     this.newNoticia = {title: "", image: "", notice: "", date: ""}
     this.cargarNoticias()
